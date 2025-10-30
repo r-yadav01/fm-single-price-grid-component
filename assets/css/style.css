@@ -5,7 +5,7 @@ body {
 
 body {
   --teal500: hsl(179, 62%, 43%);
-  --green400: hsl(71, 70%, 50%);
+  --green400: hsl(71, 73%, 54%);
   --teal100: hsl(204, 43%, 93%);
   --gray500: hsl(218, 22%, 67%);
   font-family: 'Karla', sans-serif;
@@ -35,64 +35,19 @@ article {
 }
 
 section {
-  padding: 24px;
+  padding: 24px 28px;
 }
 
 section > * {
   margin-bottom: 12px;
 }
 
-h2 {
-  font-size: 22px;
-}
-
-button {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  border-radius: 5px;
-  border: none;
-  color: var(--teal100);
-  background-color: var(--green400);
-  font-weight: bold;
-  box-shadow: 2px 3px 3px hsl(179, 50%, 40%);
-}
-
-button:active {
-  box-shadow: 3px 4px 4px hsl(179, 50%, 35%);
-  cursor: pointer;
-  color: hsl(0, 0%, 98%);
-}
-
-.price {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.sign-up strong {
-  font-size: 3rem;
-}
-
-.benefits ul {
-  list-style-type: none;
-  padding-inline-start: 0px;
-}
-
-*:last-child {
+section > :last-child {
   margin-bottom: 0px;
 }
 
-.intro > h2 {
-  color: var(--teal500);
-}
-
-.sign-up {
-  background-color: var(--teal500);
-}
-
-.intro strong {
-  color: var(--green400);
+h2 {
+  font-size: 22px;
 }
 
 .intro {
@@ -100,11 +55,82 @@ button:active {
   background-color: hsl(0, 0%, 98%);
 }
 
+.intro p:last-of-type {
+  line-height: 1.7;
+}
+
+.intro h2 {
+  color: var(--teal500);
+}
+
+.intro strong {
+  color: var(--green400);
+}
+
 .sign-up,
 .benefits {
   color: var(--teal100);
 }
 
+.sign-up {
+  background-color: var(--teal500);
+}
+
+.sign-up strong {
+  font-size: 2.5rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+
+button {
+  display: block;
+  width: 99%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  color: var(--teal100);
+  background-color: var(--green400);
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 4px 6px 6px hsl(179, 50%, 40%);
+  margin-top: 24px;
+}
+
+button:active {
+  box-shadow: 4px 6px 6px hsl(179, 50%, 35%);
+  cursor: pointer;
+  color: hsl(0, 0%, 98%);
+}
+
 .benefits {
   background-color: hsl(179, 50%, 50%);
+}
+
+.benefits ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+@media (min-width: 700px) {
+  .max-width-wrapper {
+    max-width: 700px;
+  }
+
+  article {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.25fr;
+  }
+
+  section {
+    padding: 24px 32px;
+  }
+
+  .intro {
+    grid-column: 1/3;
+  }
 }

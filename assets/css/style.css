@@ -1,0 +1,110 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  --teal500: hsl(179, 62%, 43%);
+  --green400: hsl(71, 70%, 50%);
+  --teal100: hsl(204, 43%, 93%);
+  --gray500: hsl(218, 22%, 67%);
+  font-family: 'Karla', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  background-color: hsl(204, 43%, 93%);
+}
+
+.max-width-wrapper {
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 16px;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 6px 9px 9px 3px hsl(204, 40%, 80%);
+}
+
+section {
+  padding: 24px;
+}
+
+section > * {
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  color: var(--teal100);
+  background-color: var(--green400);
+  font-weight: bold;
+  box-shadow: 2px 3px 3px hsl(179, 50%, 40%);
+}
+
+button:active {
+  box-shadow: 3px 4px 4px hsl(179, 50%, 35%);
+  cursor: pointer;
+  color: hsl(0, 0%, 98%);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sign-up strong {
+  font-size: 3rem;
+}
+
+.benefits ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+*:last-child {
+  margin-bottom: 0px;
+}
+
+.intro > h2 {
+  color: var(--teal500);
+}
+
+.sign-up {
+  background-color: var(--teal500);
+}
+
+.intro strong {
+  color: var(--green400);
+}
+
+.intro {
+  color: var(--gray500);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.sign-up,
+.benefits {
+  color: var(--teal100);
+}
+
+.benefits {
+  background-color: hsl(179, 50%, 50%);
+}
